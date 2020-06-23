@@ -19,41 +19,42 @@
 	</properties>
 
 	<dependencies>
+		<!-- Camel Starter -->
 		<dependency>
 			<groupId>org.apache.camel.springboot</groupId>
 			<artifactId>camel-spring-boot-starter</artifactId>
 			<version>3.4.0</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.apache.camel</groupId>
-			<artifactId>camel-jacksonxml</artifactId>
-			<version>3.4.0</version>
-		</dependency>
-
+		<!-- Jackson -->
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-jackson</artifactId>
 			<version>3.4.0</version>
 		</dependency>
 
+		<!-- Jackson XML -->
 		<dependency>
-			<groupId>org.apache.camel.springboot</groupId>
-			<artifactId>camel-jsonpath-starter</artifactId>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jacksonxml</artifactId>
 			<version>3.4.0</version>
 		</dependency>
 
+		<!-- Camel HTTP Component -->
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-http</artifactId>
 			<version>3.4.0</version>
 		</dependency>
 
+		<!-- Lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+
+		<!-- Spring Tests -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>

@@ -1,7 +1,11 @@
 package br.com.finalfantasy.partybuilder.partybuilderservice.web.representation.request;
 
-import br.com.finalfantasy.partybuilder.partybuilderservice.domain.Gender;
-import lombok.*;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @Setter
