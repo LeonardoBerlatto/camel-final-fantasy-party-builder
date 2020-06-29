@@ -4,5 +4,5 @@ import br.com.camel.finalfantasy.partybuilder.camelpartybuilder.representation.F
 
 public interface PartyBuilderRepository {
 
-    void addCharacterToParty(FinalFantasyCharacter character, int partyId);
+    void addCharacterToParty(FinalFantasyCharacter character, long partyId);
 }

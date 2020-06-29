@@ -18,9 +18,9 @@ public class PartyBuilderAPIRouter extends RouteBuilder {
     public void configure() throws Exception {
         from(PARTY_BUILDER_SERVICE_ROUTE_URI).
                 routeId("party-builder-service-route").
-                log("Adding characters for party with id ${exchangeProperty.partyId}").
+                log("Adding characters for party with id ${header.partyId}").
                 process(new FinalFantasyCharacterProcessor()).
                 log("${body}").
-                bean(partyBuilderRepository, "addCharacterToParty(${body}, ${exchangeProperty.partyId})"); // sends a http request to local party builder API to add party member
+                bean(partyBuilderRepository, "addCharacterToParty(${body}, ${header.partyId})"); // sends a http request to local party builder API to add party member
     }
 }

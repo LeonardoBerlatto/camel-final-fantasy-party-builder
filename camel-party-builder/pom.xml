@@ -53,6 +53,13 @@
 			<version>3.4.0</version>
 		</dependency>
 
+		<!-- Camel JUnit 5 -->
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-test-junit5</artifactId>
+			<version>3.4.0</version>
+		</dependency>
+
 		<!-- Lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>

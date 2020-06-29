@@ -16,7 +16,7 @@ public class PartyBuilderRepositoryImpl implements PartyBuilderRepository {
     public static final String PARTY_BUILDER_SERVICE_URI = "http://localhost:8081/api/members/party";
 
     @Override
-    public void addCharacterToParty(FinalFantasyCharacter character, int partyId) {
+    public void addCharacterToParty(FinalFantasyCharacter character, long partyId) {
         final var requestURI = PARTY_BUILDER_SERVICE_URI+"/"+partyId;
 
         restTemplate.postForEntity(requestURI, HttpEntityUtils.createJSONRequestEntity(character), FinalFantasyCharacter.class);

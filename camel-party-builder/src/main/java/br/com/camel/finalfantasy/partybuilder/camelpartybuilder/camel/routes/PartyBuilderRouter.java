@@ -21,7 +21,7 @@ public class PartyBuilderRouter extends RouteBuilder {
                 log("${body}").
                 split().xpath("/parties/party"). // splits for every party
                 log("${body}").
-                setProperty(PARTY_ID, xpath("/party/partyId/text()")).
+                setHeader(PARTY_ID, xpath("/party/partyId/text()")).
                 split().xpath("/party/members/name"). // splits for every party member to add to the party
                 to(FINAL_FANTASY_API_ROUTE_URI).
                 to(PARTY_BUILDER_SERVICE_ROUTE_URI);
