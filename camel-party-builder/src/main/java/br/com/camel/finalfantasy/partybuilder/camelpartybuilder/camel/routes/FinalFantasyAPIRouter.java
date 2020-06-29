@@ -1,6 +1,6 @@
 package br.com.camel.finalfantasy.partybuilder.camelpartybuilder.camel.routes;
 
-import br.com.camel.finalfantasy.partybuilder.camelpartybuilder.repository.FinalFantasyRepository;
+import br.com.camel.finalfantasy.partybuilder.camelpartybuilder.repository.FinalFantasyCharacterRepository;
 import lombok.RequiredArgsConstructor;
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
@@ -11,7 +11,7 @@ public class FinalFantasyAPIRouter extends RouteBuilder {
 
     public static final String FINAL_FANTASY_API_ROUTE_URI = "direct:ff-api-route";
 
-    private final FinalFantasyRepository repository;
+    private final FinalFantasyCharacterRepository repository;
 
     @Override
     public void configure() throws Exception {

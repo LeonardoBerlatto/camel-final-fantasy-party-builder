@@ -4,7 +4,7 @@ import br.com.camel.finalfantasy.partybuilder.camelpartybuilder.representation.F
 
 import java.util.List;
 
-public interface FinalFantasyRepository {
+public interface FinalFantasyCharacterRepository {
 
     List<FinalFantasyCharacter> findCharacterByName(String name);
 }

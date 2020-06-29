@@ -1,7 +1,7 @@
 package br.com.camel.finalfantasy.partybuilder.camelpartybuilder.repository.impl;
 
 import br.com.camel.finalfantasy.partybuilder.camelpartybuilder.representation.FinalFantasyCharacter;
-import br.com.camel.finalfantasy.partybuilder.camelpartybuilder.repository.FinalFantasyRepository;
+import br.com.camel.finalfantasy.partybuilder.camelpartybuilder.repository.FinalFantasyCharacterRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;
@@ -12,7 +12,7 @@ import java.util.Objects;
 
 @Repository
 @AllArgsConstructor
-public class FinalFantasyRepositoryImpl implements FinalFantasyRepository {
+public class FinalFantasyCharacterRepositoryImpl implements FinalFantasyCharacterRepository {
 
     public static final String FINAL_FANTASY_CHARACTERS_API_URI = "https://www.moogleapi.com/api/v1/characters/search";
 
