@@ -1,4 +1,4 @@
-# :scroll: camel-final-fantasy-party-builder
+# :camel: camel-final-fantasy-party-builder
 Project used to learn the basics of Apache Camel integration framework and to work like a Final Fantasy party building application.
 
 Highly inspired by [jntpablo's introducao-apache-camel](https://github.com/jntpablo/introducao-apache-camel)
