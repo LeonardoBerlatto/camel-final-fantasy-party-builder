@@ -9,17 +9,15 @@ import static br.com.camel.finalfantasy.partybuilder.camelpartybuilder.camel.rou
 @Component
 public class PartyBuilderRouter extends RouteBuilder {
 
-    public static final String PARTY_BUILDER_ROUTE_URI = "file:input";
+    public static final String PARTY_BUILDER_ROUTE_URI = "rabbitmq:party-builder?autoDelete=false";
 
     public static final String PARTY_ID = "partyId";
 
     @Override
     public void configure() {
-        // read all party_**.xml files from input folder
-        from(PARTY_BUILDER_ROUTE_URI + "?noop=true&include=party_.*\\.xml").
+        // reads XML from RabbitMQ
+        from(PARTY_BUILDER_ROUTE_URI).
                 routeId("main-route").
-                log("${body}").
-                split().xpath("/parties/party"). // splits for every party
                 log("${body}").
                 setHeader(PARTY_ID, xpath("/party/partyId/text()")).
                 split().xpath("/party/members/name"). // splits for every party member to add to the party

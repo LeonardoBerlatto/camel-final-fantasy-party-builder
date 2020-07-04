@@ -1,3 +1,9 @@
 camel:
   springboot:
     main-run-controller: true
+spring:
+  rabbitmq:
+    host: ${host}
+    port: ${port}
+    username: ${username}
+    password: ${password}
