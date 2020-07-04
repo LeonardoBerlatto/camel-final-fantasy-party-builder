@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<party>
+	<partyId>2</partyId>
+	<members>
+		<name>Sabin</name>
+		<name>Terra</name>
+		<name>Cyan</name>
+	</members>
+</party>
