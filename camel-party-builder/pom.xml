@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.com.camel.finalfantasy.partybuilder</groupId>
 	<artifactId>camel-party-builder</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>camel-party-builder</name>
 	<description>Demo project for Spring Boot</description>
 
