@@ -7,3 +7,6 @@ camel:
       port-number: ${queue_port:5672}
       username: ${queue_username}
       password: ${queue_password}
+party-builder:
+  api:
+    url: http://localhost:8081/members/party
