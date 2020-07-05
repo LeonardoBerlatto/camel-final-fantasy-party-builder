@@ -1,9 +1,9 @@
 camel:
   springboot:
     main-run-controller: true
-spring:
-  rabbitmq:
-    host: ${host}
-    port: ${port}
-    username: ${username}
-    password: ${password}
+  component:
+    rabbitmq:
+      hostname: ${queue_host}
+      port-number: ${queue_port:5672}
+      username: ${queue_username}
+      password: ${queue_password}

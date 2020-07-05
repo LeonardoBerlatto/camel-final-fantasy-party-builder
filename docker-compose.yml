@@ -1,0 +1,52 @@
+version: '3'
+
+services: 
+    rabbit:
+        hostname: rabbit
+        image: rabbitmq:3-management
+        ports: 
+            - 5672:5672
+            - 5673:5673
+            - 15672:15672
+        restart: always
+        volumes: 
+            - rabbit-data:/var/lib/rabbitmq
+        depends_on:
+            - database
+    database:
+        image: postgres
+        restart: always
+        ports: 
+            - 5431:5432
+        environment: 
+            POSTGRES_PASSWORD: root
+        volumes: 
+            - psql-data:/var/lib/postgresql/data
+    api:
+        image: party-builder-api
+        build:
+          context: './party-builder-service'
+          dockerfile: Dockerfile    
+        ports: 
+            - 8080:80
+        restart: always
+        depends_on: 
+            - rabbit
+            - database
+    camel:  
+        image: camel-app
+        build:
+            context: './camel-party-builder'
+            dockerfile: Dockerfile  
+        ports: 
+            - 8081:80
+        env_file: ./camel-party-builder/.env
+        restart: always
+        depends_on: 
+            - rabbit
+            - api
+            - database
+volumes:
+   psql-data: 
+   rabbit-data: 
+    

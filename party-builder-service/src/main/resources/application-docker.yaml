@@ -1,0 +1,10 @@
+server:
+  port: 80
+spring:
+  application:
+    name: party-builder-service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://database:5432/party_builder
+    username: postgres
+    password: root
